@@ -1,0 +1,16 @@
+---
+description: 速记 plan/go/goon/fix（摘要；总指挥见 00-agent-commander.mdc）
+alwaysApply: false
+---
+
+# 技能路由（全局 · F:\C\git）
+
+**每轮先走总指挥**：[`00-agent-commander.mdc`](00-agent-commander.mdc)（`alwaysApply: true`）。
+
+完整表：[`F:\C\git\docs\agent\agent-skills-routing.md`](F:/C/git/docs/agent/agent-skills-routing.md) · 优先级 [`SKILLS-PRIORITY.md`](F:/C/git/docs/SKILLS-PRIORITY.md)
+
+| 用户说 | 先读 |
+|--------|------|
+| **plan** | `brainstorming` → `writing-plans` → `01-plan` |
+| **go** / **goon** | `executing-plans` + 已确认计划 |
+| **fix** | `systematic-debugging` + 领域手册（n8n → `n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md`） |

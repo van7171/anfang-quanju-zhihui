@@ -1,0 +1,132 @@
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.trust-pill {
+  padding: 0.5rem 1rem;
+  font-size: 0.88rem;
+}
+
+.linksky-value-line {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  max-width: 56ch;
+}
+
+.arch-flow {
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.arch-steps {
+  font-family: ui-monospace, monospace;
+  color: var(--accent);
+  margin: 0;
+  text-align: center;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pain-card {
+  padding: 1.25rem;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.journey-node {
+  padding: 1rem 1.25rem;
+}
+
+.journey-id {
+  display: inline-block;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.journey-note {
+  margin-top: 1rem;
+}
+
+.pain-transition {
+  padding: 1.25rem 1.5rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.layer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.layer-card {
+  padding: 1.5rem;
+}
+
+.layer-num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.compliance-list {
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.compliance-list li::before {
+  content: '✓ ';
+  color: var(--accent);
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.workflow-node {
+  padding: 1rem;
+}
+
+.workflow-id {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.35rem;
+}
+
+.workflow-note {
+  margin-top: 1rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+}

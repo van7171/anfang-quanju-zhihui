@@ -1,0 +1,94 @@
+.site-header {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 200;
+  margin: 0.75rem auto 0;
+  width: min(100% - 1.5rem, var(--max));
+  border-radius: 999px;
+  padding: 0.5rem 0;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.35rem 0.25rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+}
+
+.brand:hover {
+  color: var(--text);
+}
+
+.brand-glyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 0 20px var(--glow-teal);
+  animation: pulse-ring 3s ease infinite;
+}
+
+.brand em {
+  display: block;
+  font-size: 0.68rem;
+  font-style: normal;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.5rem;
+}
+
+.nav-item {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: var(--text);
+  background: rgba(0, 212, 170, 0.12);
+}
+
+.site-footer {
+  padding: 3rem 0 2rem;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 1.75rem;
+}
+
+.footer-en {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    width: 100%;
+  }
+}

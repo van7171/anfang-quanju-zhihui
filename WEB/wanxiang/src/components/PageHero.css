@@ -1,0 +1,51 @@
+.page-hero {
+  padding: clamp(3rem, 10vw, 5rem) 0 2rem;
+}
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(140px, 28%);
+  gap: 2rem;
+  align-items: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin-top: 0.75rem;
+}
+
+.page-hero-orb {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 5s ease-in-out infinite;
+}
+
+.orb-ring {
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 212, 170, 0.4);
+  animation: pulse-ring 2.5s ease infinite;
+}
+
+.orb-core {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 0 40px var(--glow-teal);
+}
+
+@media (max-width: 720px) {
+  .page-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-hero-orb {
+    max-width: 160px;
+    margin-inline: auto;
+  }
+}
