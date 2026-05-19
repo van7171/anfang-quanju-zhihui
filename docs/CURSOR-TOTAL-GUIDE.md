@@ -25,7 +25,7 @@
 1. **用户当轮明确指令**
 2. **总指挥** [`00-agent-commander.mdc`](../.cursor/rules/00-agent-commander.mdc) → Read **`using-superpowers`** → [`agent-skills-routing.md`](agent/agent-skills-routing.md) §0
 3. **`F:\C\git\.cursor\skills\`**（主副本，与 `%USERPROFILE%\.cursor\skills\` 同步）
-4. 子项目 **`CLAUDE.md`**（`n8n-fix` / `anfang-patent` 等领域红线）
+4. 子项目 **`CLAUDE.md`**（`安防-n8n运维` / `anfang-patent` 等领域红线）
 5. 子项目 **`.cursor/rules`**（仅指针，**不得**覆盖 §2）
 
 **硬红线**仍以 `n8n-fix` 内 `CLAUDE.md` + `docs/n8n/n8n-mcp-workflow-guide.md` 为准（仅 n8n 域）。

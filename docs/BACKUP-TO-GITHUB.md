@@ -1,19 +1,32 @@
-# F:\C\git 备份到 GitHub 实操指南
+# 四仓备份到 GitHub 实操指南
 
-> **调查日期**：2026-05-19  
-> **重要**：本文只给出命令与步骤；**在你明确说 `go` 之前，不要执行 `git push`、`gh repo create` 或改远程。**  
-> 当前机器 **未在 PATH 中找到 `gh`**，需先安装 [GitHub CLI](https://cli.github.com/) 或使用 GitHub 网页创建空仓库。
+> **调查日期**：2026-05-19 · **结构**：见 [`../../STRUCTURE.md`](../../STRUCTURE.md)  
+> **当前推荐**：方案 B — 四个独立仓库（见下表），**不要**再在 `F:\C\git` 根建 monorepo。  
+> 本机 **gh** 若不可用，用网页创建空仓库后 `git push`。
+
+### 四仓与远程（目标态）
+
+| 本地目录 | GitHub remote |
+|----------|----------------|
+| `安防开发总仓/安防-n8n运维` | `van7171/n8n-fix` |
+| `安防开发总仓/安防-专利` | `van7171/anfang-zhuanli` |
+| `安防开发总仓/安防-官网` | `van7171/anfang-guanwang` |
+| `安防开发总仓/安防-全局指挥` | `van7171/anfang-quanju-zhihui` |
+
+技能树 **`F:\C\git\.cursor\skills`** 不进 Git；用 `robocopy` 同步到 `%USERPROFILE%\.cursor\skills`。
 
 ---
 
-## 1. 当前 Git 状态（实测）
+## 1. 历史调查时的 Git 状态（2026-05-19 上午，部分已过时）
+
+> 下列为迁移前快照；**以四仓各自 `git status` 为准。**
 
 | 路径 | 是否 Git 仓库 | 分支 | `git remote -v` | 说明 |
 |------|---------------|------|-----------------|------|
-| `F:\C\git` | 是 | `main`（约 2 次提交） | **无 remote** | 已跟踪 `docs/`、`WEB/` 等；`n8n-fix/`、`安防开发总仓（已拆四仓）/`、`安防-专利/` 在根 `status` 中为 **未跟踪 `??`**（子目录自带 `.git`） |
+| `F:\C\git` | 是 | `main`（约 2 次提交） | **无 remote** | 已跟踪 `docs/`、`WEB/` 等；`安防-n8n运维/`、`安防开发总仓（已拆四仓）/`、`安防-专利/` 在根 `status` 中为 **未跟踪 `??`**（子目录自带 `.git`） |
 | `F:\C\git\安防开发总仓\安防-n8n运维` | 是 | `main` | `origin` → `https://github.com/van7171/n8n-fix.git` | 有大量本地未提交改动；与 `origin/main` 同步关系需自行 `commit` 后再 `push` |
 | `F:\C\git\安防开发总仓（已拆四仓）` | 是 | `master`（**尚无首次 commit**） | **无 remote** | 已 `git add` 大量专利/任务书 PDF；对象约 **96 MiB** |
-| `F:\C\git\anfang-patent` | 联结（Junction） | — | — | 指向 `F:\C\git\安防开发总仓（已拆四仓）`；**不要**在根仓库里再单独提交一份 |
+| `F:\C\git\安防开发总仓\安防-专利` | 联结（Junction） | — | — | 指向 `F:\C\git\安防开发总仓（已拆四仓）`；**不要**在根仓库里再单独提交一份 |
 | `F:\C\git\WEB` | 否（无独立 `.git`） | — | — | 属于 **根仓库** 的一部分 |
 
 **磁盘粗算（含未跟踪文件）**：整棵 `F:\C\git` 约 **270 MB**；其中 `安防开发总仓（已拆四仓）` 约 **117 MB**，`n8n-fix` 约 **84 MB**，`WEB` 约 **68 MB**。
@@ -115,7 +128,7 @@ git push -u origin master
 # git push -u origin main
 ```
 
-**不要**对 `F:\C\git\anfang-patent` 再建第三个远程；它只是联结。
+**不要**对 `F:\C\git\安防开发总仓\安防-专利` 再建第三个远程；它只是联结。
 
 ### 4.3 仓库三：根目录 `F:\C\git`（工作区 + WEB + 全局 docs）
 
