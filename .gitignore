@@ -1,0 +1,22 @@
+# 技能树在 F:\C\git\.cursor\skills\（本仓只保留 rules 指针，不提交 skills 副本）
+.cursor/skills/
+
+# 同级子仓（勿混入本仓）
+../安防-n8n运维/
+../安防-专利/
+../安防-官网/
+
+# 工作区根旧路径（若仍存在）
+../../n8n-fix/
+../../anfang-patent-web/
+../../WEB/
+../../anfang-patent/
+
+# Cursor / secrets
+.cursor/mcp.json
+
+# OS / temp
+tmp/
+*.log
+.DS_Store
+Thumbs.db
