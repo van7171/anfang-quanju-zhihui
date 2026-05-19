@@ -32,6 +32,17 @@ Copy-Item -Force "F:\C\git\.cursor\rules\*.mdc" "$env:USERPROFILE\.cursor\rules\
 
 路径优先：**先** `F:\C\git\.cursor\skills\`，**再** `%USERPROFILE%\.cursor\skills\`（应与前者 `robocopy` 一致）。
 
+### 2.1 云端备份（第五仓）
+
+| 项 | 值 |
+|----|-----|
+| 本地仓 | `F:\C\git\安防开发总仓\安防-cursor-skills\` |
+| GitHub | https://github.com/van7171/anfang-cursor-skills |
+| 内容 | `skills/`（镜像 `.cursor/skills`）+ `rules/*.mdc` |
+| 换机 / 推送 | 见该仓 [SYNC.md](../../安防-cursor-skills/SYNC.md) |
+
+技能有改动时：先 `robocopy` 写入第五仓 → `git commit` → `git push`；新电脑 `git clone` + `submodule update`（若已启用子模块）+ 本节 §2 的 robocopy 到用户目录。
+
 ---
 
 ## 3. 按工作域选 Skill（不复制到子仓库）
@@ -68,3 +79,4 @@ Copy-Item -Force "F:\C\git\.cursor\rules\*.mdc" "$env:USERPROFILE\.cursor\rules\
 |------|------|
 | 2026-05-19 | 初版：明确全局优先于子仓库；专利 / n8n / web 分域表；robocopy 同步命令。 |
 | 2026-05-19 | 总指挥通用文迁至 `docs/agent/`；`n8n-global` 仅 n8n 域规格与 stub。 |
+| 2026-05-19 | 增加第五仓 `安防-cursor-skills` 云端备份与 SYNC 链接。 |
