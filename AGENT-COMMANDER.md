@@ -12,8 +12,8 @@
 | 总策略 | [`docs/CURSOR-TOTAL-GUIDE.md`](docs/CURSOR-TOTAL-GUIDE.md) |
 | 优先级说明 | [`docs/SKILLS-PRIORITY.md`](docs/SKILLS-PRIORITY.md) |
 | 全局 CLAUDE | [`CLAUDE.md`](CLAUDE.md) |
-| n8n 子项目 | [`n8n-fix/CLAUDE.md`](n8n-fix/CLAUDE.md) |
-| 专利 / 官网 | [`anfang-patent/CLAUDE.md`](anfang-patent/CLAUDE.md) |
+| n8n 子项目 | [`../安防-n8n运维/CLAUDE.md`](../安防-n8n运维/CLAUDE.md) |
+| 专利 / 官网 | [`安防-专利/CLAUDE.md`](安防-专利/CLAUDE.md) |
 
 ## 每轮 Agent 必做（摘要）
 

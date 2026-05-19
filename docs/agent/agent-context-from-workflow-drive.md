@@ -1,6 +1,6 @@
 # Agent 辅助惯例（跨项目 · 源自 `F:\C\workflow`）
 
-本文档整理自本机 `F:\C\workflow` 下的规则类文件，摘取**仍有用且不冲突**的通用部分；领域红线以各子仓库 `CLAUDE.md` 为准（n8n 见 [`n8n-fix/CLAUDE.md`](../../n8n-fix/CLAUDE.md) + [`n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md`](../../n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md)）。**n8n 专用补充**见 [`n8n-fix/docs/dev/agent-context-n8n-appendix.md`](../../n8n-fix/docs/dev/agent-context-n8n-appendix.md)。
+本文档整理自本机 `F:\C\workflow` 下的规则类文件，摘取**仍有用且不冲突**的通用部分；领域红线以各子仓库 `CLAUDE.md` 为准（n8n 见 [`n8n-fix/CLAUDE.md`](../../安防-n8n运维/CLAUDE.md) + [`安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md)）。**n8n 专用补充**见 [`安防-n8n运维/docs/dev/agent-context-n8n-appendix.md`](../../安防-n8n运维/docs/dev/agent-context-n8n-appendix.md)。
 
 ---
 
@@ -50,7 +50,7 @@
 | 必须输出**整份**制品全量 dump 供导入 | 易与 SDK / 红线冲突 | 优先官方 API + 增量；小改给「对象 + 字段」清单 |
 | 互相矛盾的「全量 vs 仅局部」旧规则 | 子目录规则打架 | 以用户当轮任务 + 当前子仓库手册为准 |
 
-n8n 工作流、采集器、`N8N_SPEC` 等**额外行**见 [`agent-context-n8n-appendix.md`](../../n8n-fix/docs/dev/agent-context-n8n-appendix.md)。
+n8n 工作流、采集器、`N8N_SPEC` 等**额外行**见 [`agent-context-n8n-appendix.md`](../../安防-n8n运维/docs/dev/agent-context-n8n-appendix.md)。
 
 ---
 
@@ -60,4 +60,4 @@ n8n 工作流、采集器、`N8N_SPEC` 等**额外行**见 [`agent-context-n8n-a
 
 | 日期 | 说明 |
 |------|------|
-| 2026-05-19 | 从 `n8n-global` / `n8n-fix/docs/dev` 拆出通用正文；n8n 附录留在 `n8n-fix`。 |
+| 2026-05-19 | 从 `n8n-global` / `安防-n8n运维/docs/dev` 拆出通用正文；n8n 附录留在 `n8n-fix`。 |

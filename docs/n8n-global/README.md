@@ -1,12 +1,10 @@
-# n8n 域全局文档（非总指挥正文）
+# n8n 域文档已迁至「安防-n8n运维」
 
-本目录存放 **n8n 相关** 规格与 playbook。跨项目的 Agent 调度见 [`../agent/`](../agent/)。
-
-| 文件 | 说明 |
+| 文档 | 路径 |
 |------|------|
-| [`N8N_SPEC.md`](N8N_SPEC.md) | 工作流需求契约模板 |
-| [`gzh-workflow-playbook.md`](gzh-workflow-playbook.md) | 公众号工作流 |
-| [`agent-skills-routing.md`](agent-skills-routing.md) | 重定向 → [`../agent/agent-skills-routing.md`](../agent/agent-skills-routing.md) |
-| [`agent-context-from-workflow-drive.md`](agent-context-from-workflow-drive.md) | 重定向 → [`../agent/`](../agent/) |
+| `N8N_SPEC.md` | [`../../../安防-n8n运维/N8N_SPEC.md`](../../../安防-n8n运维/N8N_SPEC.md) |
+| 公众号 playbook | [`../../../安防-n8n运维/docs/n8n/gzh-workflow-playbook.md`](../../../安防-n8n运维/docs/n8n/gzh-workflow-playbook.md) |
+| n8n 运维手册 | [`../../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](../../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md) |
+| 全局副本（可选） | [`../../../安防-n8n运维/docs/n8n-global/`](../../../安防-n8n运维/docs/n8n-global/) |
 
-运维手册与红线仍在 **`n8n-fix/docs/n8n/`**。
+本目录仅保留重定向，避免与「安防-全局指挥」职责混淆。

@@ -39,9 +39,9 @@ Copy-Item -Force "F:\C\git\.cursor\rules\*.mdc" "$env:USERPROFILE\.cursor\rules\
 | 工作域 | 打开的工作区 | 每轮固定 | `plan` 额外 | `go` / `fix` 额外 | 关键词 |
 |--------|--------------|----------|-------------|-------------------|--------|
 | **n8n 运维** | `n8n-fix/` | using-superpowers → agent-skills-routing §0 | brainstorming → writing-plans → 01-plan；`N8N_SPEC.md` | executing-plans / systematic-debugging；`docs/n8n/n8n-mcp-workflow-guide.md` | 公众号 → gzh-playbook；巡检@ → workflow-aliases + guide §6.4 |
-| **安防总项目** | `n8n-fix/`（文档） | 同上 | 同上 + `docs/project-docs/ANFANG-PROGRAM-MASTER.md` | 同上；任务书原件见 `anfang-patent/taskbooks/` | 里程碑、商业化 → ANFANG-PROGRAM-MASTER §8 |
-| **专利 / 材料包** | `anfang-patent/` | 同上（**仍走全局** plan/go/fix） | brainstorming → writing-plans → 01-plan；`patent/` 与脚本 README | executing-plans；改稿用 verification-before-completion | 五书、交底、bundle → `patent/`、`scripts/build-patent-material-bundle.py` |
-| **官网 / WEB** | `anfang-patent/web/` 或 `WEB/`（旧副本） | 同上 | brainstorming → writing-plans → 01-plan；`web/` 文案 md | executing-plans；前端改动可加 playwright-cli | Playwright / E2E → `playwright-cli/SKILL.md` |
+| **安防总项目** | `n8n-fix/`（文档） | 同上 | 同上 + `docs/project-docs/ANFANG-PROGRAM-MASTER.md` | 同上；任务书原件见 `安防-专利/taskbooks/` | 里程碑、商业化 → ANFANG-PROGRAM-MASTER §8 |
+| **专利 / 材料包** | `安防-专利/` | 同上（**仍走全局** plan/go/fix） | brainstorming → writing-plans → 01-plan；`patent/` 与脚本 README | executing-plans；改稿用 verification-before-completion | 五书、交底、bundle → `patent/`、`scripts/build-patent-material-bundle.py` |
+| **官网 / WEB** | `安防-专利/web/` 或 `WEB/`（旧副本） | 同上 | brainstorming → writing-plans → 01-plan；`web/` 文案 md | executing-plans；前端改动可加 playwright-cli | Playwright / E2E → `playwright-cli/SKILL.md` |
 | **跨仓库** | `F:\C\git` 根 | 同上 | 按主任务选上表一行 | 同上 | GitHub → `05-github-cli`；架构图 → `04-mermaid-diagrams` |
 
 **禁止**：在 `n8n-fix` 或 `anfang-patent` 内再维护一份完整 `superpowers/` 树；只保留 **指针**（`CLAUDE.md` + 可选 `.cursor/rules/*.mdc`）。
@@ -55,9 +55,9 @@ Copy-Item -Force "F:\C\git\.cursor\rules\*.mdc" "$env:USERPROFILE\.cursor\rules\
 | 总指挥（人读） | `F:\C\git\AGENT-COMMANDER.md` |
 | 总指挥（Cursor） | `F:\C\git\.cursor\rules\00-agent-commander.mdc` |
 | 技能主副本 | `F:\C\git\.cursor\skills\` |
-| 路由全文 | `F:\C\git\docs\agent\agent-skills-routing.md` |
-| Agent 协作惯例 | `F:\C\git\docs\agent\agent-context-from-workflow-drive.md` |
-| n8n 红线 | `F:\C\git\n8n-fix\CLAUDE.md` |
+| 路由全文 | `F:\C\git\安防开发总仓\安防-全局指挥\docs\agent\agent-skills-routing.md` |
+| Agent 协作惯例 | `F:\C\git\安防开发总仓\安防-全局指挥\docs\agent\agent-context-from-workflow-drive.md` |
+| n8n 红线 | `F:\C\git\安防开发总仓\安防-n8n运维\CLAUDE.md` |
 | 专利 / 官网 | `F:\C\git\anfang-patent\CLAUDE.md` |
 
 ---

@@ -12,9 +12,9 @@
 | [`F:\C\git\AGENT-COMMANDER.md`](../AGENT-COMMANDER.md) | 总指挥人读入口 |
 | [`F:\C\git\.cursor\rules\`](../.cursor/rules/) | **始终生效** 的 Cursor 规则（`alwaysApply`） |
 | [`F:\C\git\.cursor\skills\`](../.cursor/skills/) | 技能实体 **磁盘主副本**（与 `%USERPROFILE%\.cursor\skills\` 建议保持同步） |
-| [`F:\C\git\docs\agent\`](agent/) | **跨项目** 技能路由、Agent 协作惯例 |
-| [`F:\C\git\docs\n8n-global\`](n8n-global/) | n8n 域：`N8N_SPEC`、公众号 playbook 等 |
-| [`F:\C\git\n8n-fix\`](../n8n-fix/) | n8n 运维与安防文档子仓库 |
+| [`F:\C\git\安防开发总仓\安防-全局指挥\docs\agent\`](agent/) | **跨项目** 技能路由、Agent 协作惯例 |
+| [`F:\C\git\安防开发总仓\安防-n8n运维\docs\n8n-global\`](n8n-global/) | n8n 域：`N8N_SPEC`、公众号 playbook 等 |
+| [`F:\C\git\安防开发总仓\安防-n8n运维\`](../安防-n8n运维/) | n8n 运维与安防文档子仓库 |
 
 ---
 
@@ -70,8 +70,8 @@ Copy-Item -Force "F:\C\git\.cursor\rules\*.mdc" "$env:USERPROFILE\.cursor\rules\
 在子仓库 `CLAUDE.md` 开场写：
 
 ```markdown
-全局策略：F:\C\git\docs\CURSOR-TOTAL-GUIDE.md
-技能路由：F:\C\git\docs\n8n-global\agent-skills-routing.md
+全局策略：F:\C\git\安防开发总仓\安防-全局指挥\docs\CURSOR-TOTAL-GUIDE.md
+技能路由：F:\C\git\安防开发总仓\安防-n8n运维\docs\n8n-global\agent-skills-routing.md
 ```
 
 `n8n-fix` 与 `anfang-patent` 已按此方式链接（仅指针，见 [`SKILLS-PRIORITY.md`](SKILLS-PRIORITY.md)）。

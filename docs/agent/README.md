@@ -9,4 +9,4 @@
 
 **人读入口**：[`AGENT-COMMANDER.md`](../../AGENT-COMMANDER.md) · **Cursor 规则**：[`F:\C\git\.cursor\rules\00-agent-commander.mdc`](../../.cursor/rules/00-agent-commander.mdc) · **优先级**：[`SKILLS-PRIORITY.md`](../SKILLS-PRIORITY.md)
 
-**n8n 域补充**：[`n8n-fix/docs/dev/agent-context-n8n-appendix.md`](../../n8n-fix/docs/dev/agent-context-n8n-appendix.md) · [`n8n-global/`](../n8n-global/)（`N8N_SPEC`、公众号 playbook 等）
+**n8n 域补充**：[`安防-n8n运维/docs/dev/agent-context-n8n-appendix.md`](../../安防-n8n运维/docs/dev/agent-context-n8n-appendix.md) · [`n8n-global/`](../n8n-global/)（`N8N_SPEC`、公众号 playbook 等）

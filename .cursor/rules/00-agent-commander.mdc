@@ -7,23 +7,23 @@ alwaysApply: true
 
 你是 **调度官**，不是默认直接写代码。用户**每条消息**在给出实质回复或改文件之前，必须先完成 **§1 自检** 与 **§2 技能加载**（用 **Read** 打开对应 `SKILL.md`；Cursor 无 Skill 工具时以 Read 为准）。
 
-**权威全文**：[`F:\C\git\docs\agent\agent-skills-routing.md`](F:/C/git/docs/agent/agent-skills-routing.md)  
-**总策略**：[`F:\C\git\docs\CURSOR-TOTAL-GUIDE.md`](F:/C/git/docs/CURSOR-TOTAL-GUIDE.md)  
-**人读入口**：[`F:\C\git\AGENT-COMMANDER.md`](F:/C/git/AGENT-COMMANDER.md)
+**权威全文**：[`安防-全局指挥/docs/agent/agent-skills-routing.md`](F:/C/git/安防开发总仓/安防-全局指挥/docs/agent/agent-skills-routing.md)  
+**总策略**：[`安防-全局指挥/docs/CURSOR-TOTAL-GUIDE.md`](F:/C/git/安防开发总仓/安防-全局指挥/docs/CURSOR-TOTAL-GUIDE.md)  
+**人读入口**：[`安防-全局指挥/AGENT-COMMANDER.md`](F:/C/git/安防开发总仓/安防-全局指挥/AGENT-COMMANDER.md)
 
 技能磁盘路径（优先顺序）：
 
 1. `F:\C\git\.cursor\skills\`
 2. `%USERPROFILE%\.cursor\skills\`（应与上者 `robocopy` 同步）
 
-**硬红线**仍以子项目 [`n8n-fix/CLAUDE.md`](F:/C/git/n8n-fix/CLAUDE.md) + [`n8n-fix/docs/n8n-mcp-workflow-guide.md`](F:/C/git/n8n-fix/docs/n8n-mcp-workflow-guide.md) 为准；Skill 不得覆盖红线。
+**硬红线**仍以 [`安防-n8n运维/CLAUDE.md`](F:/C/git/安防开发总仓/安防-n8n运维/CLAUDE.md) + [`安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](F:/C/git/安防开发总仓/安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md) 为准；Skill 不得覆盖红线。
 
 ---
 
 ## §1 每轮自检（未完成不得动手）
 
 1. **Read** `superpowers/skills/using-superpowers/SKILL.md`（或用户目录下同路径）。
-2. **Read** [`agent-skills-routing.md`](F:/C/git/docs/agent/agent-skills-routing.md) 的 **§0 总指挥** 与 **§1 速记**（至少扫表）。
+2. **Read** [`agent-skills-routing.md`](F:/C/git/安防开发总仓/安防-全局指挥/docs/agent/agent-skills-routing.md) 的 **§0 总指挥** 与 **§1 速记**（至少扫表）。
 3. **归类用户意图**（可多选）：`plan` | `go` | `goon` | `fix` | n8n 运维 | 安防总项目 | 公众号 GZ | Obsidian | Playwright | GitHub | 其他。
 4. **按 §2 加载** 所列 `SKILL.md`（真的 Read，不要只写在回复里）。
 5. 若将改 n8n / 声称修复完成：再 Read `verification-before-completion`；`fix` / 报错再 Read `systematic-debugging`。
@@ -39,23 +39,23 @@ alwaysApply: true
 | 顺序 | Skill | 路径（相对 skills 根） |
 |------|--------|-------------------------|
 | 1 | using-superpowers | `superpowers/skills/using-superpowers/SKILL.md` |
-| 2 | （路由全文） | 见 `F:\C\git\docs\agent\agent-skills-routing.md` |
+| 2 | （路由全文） | 见 `F:\C\git\安防开发总仓\安防-全局指挥\docs\agent\agent-skills-routing.md` |
 
 ### B. 速记命令（用户说了才加读；语义相同也算）
 
 | 用户说 | 必读 SKILL（按顺序） |
 |--------|----------------------|
-| **plan** / 对齐需求 / 没思路 | `brainstorming` → `superpowers/skills/writing-plans` → `01-plan`；n8n 加 `F:\C\git\docs\n8n-global\N8N_SPEC.md` 或 `n8n-fix/N8N_SPEC.md` |
+| **plan** / 对齐需求 / 没思路 | `brainstorming` → `superpowers/skills/writing-plans` → `01-plan`；n8n 加 `安防-n8n运维/N8N_SPEC.md` |
 | **go** / 按方案执行 | `superpowers/skills/executing-plans` + 已确认计划 / `tmp/plans/` |
 | **goon** / 继续 | 同 **go**（断点续跑） |
-| **fix** / 报错 / 修 | `superpowers/skills/systematic-debugging` → `n8n-fix/docs/n8n-mcp-workflow-guide.md` §3、§5 |
+| **fix** / 报错 / 修 | `superpowers/skills/systematic-debugging` → `安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md` §3、§5 |
 
 ### C. 关键词（无速记时也生效）
 
 | 关键词 | 附加必读 |
 |--------|----------|
-| 公众号 / GZ / 巡检@ / 排查@ | `n8n-fix/docs/gzh-workflow-playbook.md` + `n8n-mcp-workflow-guide`；`fix` 加 `n8n-workflow-encoding-and-graph-consistency` |
-| 安防 / 任务书 / 商业化 / 里程碑 | `n8n-fix/docs/project-docs/ANFANG-PROGRAM-MASTER.md` |
+| 公众号 / GZ / 巡检@ / 排查@ | `安防-n8n运维/docs/n8n/gzh-workflow-playbook.md` + `n8n-mcp-workflow-guide`；`fix` 加 `n8n-workflow-encoding-and-graph-consistency` |
+| 安防 / 任务书 / 商业化 / 里程碑 | `安防-n8n运维/docs/project-docs/ANFANG-PROGRAM-MASTER.md` |
 | Obsidian / vault / Canvas | `obsidian-skills/skills/<子技能>/SKILL.md` |
 | Playwright / 浏览器测 | `playwright-cli/SKILL.md` |
 | PR / gh / GitHub | `05-github-cli/SKILL.md` |

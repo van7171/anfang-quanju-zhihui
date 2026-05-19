@@ -25,8 +25,8 @@
 
 | 用户意图大类 | 除上表外必读 |
 |--------------|----------------|
-| 安防总项目 / 任务书 / 商业化 | [`n8n-fix/docs/project-docs/ANFANG-PROGRAM-MASTER.md`](../../n8n-fix/docs/project-docs/ANFANG-PROGRAM-MASTER.md)、[`INDEX.md`](../../n8n-fix/docs/project-docs/INDEX.md) §0 |
-| n8n / 工作流 / 巡检 / 公众号 | [`n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md`](../../n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md)、[`N8N_SPEC.md`](../n8n-global/N8N_SPEC.md) |
+| 安防总项目 / 任务书 / 商业化 | [`安防-n8n运维/docs/project-docs/ANFANG-PROGRAM-MASTER.md`](../../安防-n8n运维/docs/project-docs/ANFANG-PROGRAM-MASTER.md)、[`INDEX.md`](../../安防-n8n运维/docs/project-docs/INDEX.md) §0 |
+| n8n / 工作流 / 巡检 / 公众号 | [`安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md)、[`N8N_SPEC.md`](../../安防-n8n运维/N8N_SPEC.md) |
 | 任意 **`plan` / `fix` / `go` / `goon`** | **§1 对应行 + 所列 `SKILL.md` 必须先 Read 再回复** |
 
 ---
@@ -63,7 +63,7 @@
 
 1. `%USERPROFILE%\.cursor\skills\superpowers\skills\executing-plans\SKILL.md`
 2. 上一轮或 `tmp/plans/` 中**已确认**的计划摘要
-3. [`n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md`](../../n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md) §1.3（若动 n8n）
+3. [`安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md) §1.3（若动 n8n）
 
 **行为**：直接执行待办；改工作流成功后按 `CLAUDE.md` 触发 **workflow-backup-bot**；完工前对照 `superpowers\skills\verification-before-completion\SKILL.md` 自检。
 
@@ -86,8 +86,8 @@
 **必读（按顺序）**：
 
 1. `%USERPROFILE%\.cursor\skills\superpowers\skills\systematic-debugging\SKILL.md`
-2. [`n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md`](../../n8n-fix/docs/n8n/n8n-mcp-workflow-guide.md) §3、§5
-3. 公众号 / Form / `undefined.name`：[`n8n-fix/docs/n8n/n8n-workflow-encoding-and-graph-consistency.md`](../../n8n-fix/docs/n8n/n8n-workflow-encoding-and-graph-consistency.md)
+2. [`安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md) §3、§5
+3. 公众号 / Form / `undefined.name`：[`安防-n8n运维/docs/n8n/n8n-workflow-encoding-and-graph-consistency.md`](../../安防-n8n运维/docs/n8n/n8n-workflow-encoding-and-graph-consistency.md)
 4. 子代理-heavy 修复：`superpowers\skills\subagent-driven-development\SKILL.md`（可选）
 
 **行为**：能改则改；不 Mock 凭证、不编造全量 JSON；硬红线项只给 UI 清单；修复后 **`verification-before-completion`** + 备份钩子。
@@ -131,5 +131,5 @@
 | 日期 | 说明 |
 |------|------|
 | 2026-05-15 | 初版：plan/go/goon/fix 与 brainstorming、obsidian、playwright、superpowers 子技能绑定。 |
-| 2026-05-15 | 上收至 `F:\C\git\docs\n8n-global\`，技能主副本在 `F:\C\git\.cursor\skills\`。 |
-| 2026-05-19 | 路由全文迁至 `F:\C\git\docs\agent\`（跨项目）；`n8n-global` 留重定向 stub。 |
+| 2026-05-15 | 上收至 `F:\C\git\安防开发总仓\安防-n8n运维\docs\n8n-global\`，技能主副本在 `F:\C\git\.cursor\skills\`。 |
+| 2026-05-19 | 路由全文迁至 `F:\C\git\安防开发总仓\安防-全局指挥\docs\agent\`（跨项目）；`n8n-global` 留重定向 stub。 |
