@@ -1,41 +1,33 @@
-# F:\C\git — 工作区总览
+# 安防-全局指挥（anfang-quanju-zhihui）
 
-| 目录 | 用途 | Cursor 打开 |
-|------|------|-------------|
-| [`n8n-fix/`](n8n-fix/) | n8n 工作流运维、安防编排文档、JSON Schema | 改流 / 巡检 / 总项目编排 |
-| [`anfang-patent/`](anfang-patent/) | 专利、任务书 PDF、官网 `web/WEB-wanxiang` | 五书 / 交底 / 官网 / 任务书原件 |
-| [`WEB/`](WEB/) | 官网**历史**副本（`site/`），新开发请用 `anfang-patent` | 仅维护旧副本时 |
-| [`docs/`](docs/) | 全局 Agent（`agent/`）、n8n 规格（`n8n-global/`） | 调规则 / 跨项目说明 |
+跨四仓的 **Agent 总指挥** 仓库：规则指针、`docs/agent`、技能优先级说明。**不**包含 n8n 工作流、专利 PDF、官网源码。
 
-`anfang-patent` 当前为指向 `anfang-patent-web` 的目录联接（物理重命名被占用时）。关闭占用进程后可 `Rename-Item anfang-patent-web anfang-patent` 并删除联接。
+## 四仓（同级目录 `F:\C\git\安防开发总仓\`）
 
-详见各仓库根目录 `README.md`，尤其是 [`n8n-fix/README.md`](n8n-fix/README.md)。
+| 目录 | GitHub | 职责 |
+|------|--------|------|
+| [`../安防-n8n运维/`](../安防-n8n运维/) | `van7171/n8n-fix` | n8n 运维、Schema、安防编排 |
+| [`../安防-专利/`](../安防-专利/) | `van7171/anfang-zhuanli` | 专利、任务书 PDF |
+| [`../安防-官网/`](../安防-官网/) | `van7171/anfang-guanwang` | 官网 Vite + 文案 |
+| **本仓** | `van7171/anfang-quanju-zhihui` | 本 README、`AGENT-COMMANDER`、路由 |
 
----
+父级索引：[`../README.md`](../README.md)。
 
-## 技能与规则优先级
-
-Agent **以 `F:\C\git` 为调度根**，不在子仓库复制完整技能树。
+## 技能与规则
 
 | 层级 | 路径 |
 |------|------|
 | 人读入口 | [`AGENT-COMMANDER.md`](AGENT-COMMANDER.md) |
-| 全局 Agent 约定 | [`CLAUDE.md`](CLAUDE.md) |
-| Cursor 总指挥规则 | [`.cursor/rules/00-agent-commander.mdc`](.cursor/rules/00-agent-commander.mdc) |
-| 技能主副本 | [`.cursor/skills/`](.cursor/skills/) |
-| 优先级与分域表 | [`docs/SKILLS-PRIORITY.md`](docs/SKILLS-PRIORITY.md) |
+| Agent 约定 | [`CLAUDE.md`](CLAUDE.md) |
+| Cursor 规则 | [`.cursor/rules/`](.cursor/rules/) |
+| **技能物理路径** | `F:\C\git\.cursor\skills\`（本仓 **不** git 跟踪 `skills/`） |
+| 优先级 | [`docs/SKILLS-PRIORITY.md`](docs/SKILLS-PRIORITY.md) |
 | 路由全文 | [`docs/agent/agent-skills-routing.md`](docs/agent/agent-skills-routing.md) |
-| Agent 惯例 | [`docs/agent/`](docs/agent/) |
-| 总策略 | [`docs/CURSOR-TOTAL-GUIDE.md`](docs/CURSOR-TOTAL-GUIDE.md) |
 
-**优先级（简）**：用户指令 > 本目录 `.cursor/rules` > 本目录 `.cursor/skills` > 子仓库 `CLAUDE.md` > 子仓库 `.cursor/rules`（仅指针）。
+## 远程
 
-**同步到本机**（建议执行一次或技能更新后）：
-
-```powershell
-robocopy "F:\C\git\.cursor\skills" "$env:USERPROFILE\.cursor\skills" /MIR /XD .git
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.cursor\rules" | Out-Null
-Copy-Item -Force "F:\C\git\.cursor\rules\*.mdc" "$env:USERPROFILE\.cursor\rules\"
+```text
+https://github.com/van7171/anfang-quanju-zhihui.git
 ```
 
-子仓库入口：[`n8n-fix/CLAUDE.md`](n8n-fix/CLAUDE.md) · [`anfang-patent/CLAUDE.md`](anfang-patent/CLAUDE.md)。
+（由原 `My-Git` 收窄；推送前请在 GitHub 创建空仓库。）
