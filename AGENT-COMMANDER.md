@@ -1,30 +1,31 @@
-# Agent 总指挥（全局入口）
+# Agent 总指挥（人读入口）
 
-本仓库 **每条 Cursor 对话** 默认走「总指挥」调度，避免跳过 Superpowers / 技能路由直接改代码。
+Cursor 每轮自动加载 [`F:\C\git\.cursor\rules\00-agent-commander.mdc`](../../.cursor/rules/00-agent-commander.mdc)。本文件 **不重复** 路由表，只汇总链接。
 
-## 自动生效位置
+## 权威文档（3+1）
 
-| 层级 | 文件 |
+| 用途 | 文件 |
 |------|------|
-| Cursor 规则（始终应用） | [`F:\C\git\.cursor\rules\00-agent-commander.mdc`](.cursor/rules/00-agent-commander.mdc) |
-| 路由全文 | [`docs/agent/agent-skills-routing.md`](docs/agent/agent-skills-routing.md) |
-| Agent 协作惯例 | [`docs/agent/agent-context-from-workflow-drive.md`](docs/agent/agent-context-from-workflow-drive.md) |
-| 总策略 | [`docs/CURSOR-TOTAL-GUIDE.md`](docs/CURSOR-TOTAL-GUIDE.md) |
-| 优先级说明 | [`docs/SKILLS-PRIORITY.md`](docs/SKILLS-PRIORITY.md) |
-| 全局 CLAUDE | [`CLAUDE.md`](CLAUDE.md) |
-| n8n 子项目 | [`../安防-n8n运维/CLAUDE.md`](../安防-n8n运维/CLAUDE.md) |
-| 专利 / 官网 | [`安防-专利/CLAUDE.md`](安防-专利/CLAUDE.md) |
+| 怎么想 · 防幻觉 · 文档预算 | [`F:\C\git\RATIONAL-AGENT.md`](../../RATIONAL-AGENT.md) |
+| plan / go / fix · 关键词 | [`docs/agent/agent-skills-routing.md`](docs/agent/agent-skills-routing.md) |
+| 冲突优先级 | [`docs/SKILLS-PRIORITY.md`](docs/SKILLS-PRIORITY.md) |
+| 领域 skills（按需 §2） | [`docs/agent/domain-skills-thinking.md`](docs/agent/domain-skills-thinking.md) |
 
-## 每轮 Agent 必做（摘要）
+## 子仓入口
 
-1. Read **`using-superpowers`** → Read **`agent-skills-routing`**。
-2. 按用户意图加载：**brainstorming / writing-plans / executing-plans / systematic-debugging / verification-before-completion** 等（见路由表）。
-3. 速记：**plan**（只规划）· **go** / **goon**（执行）· **fix**（修）。
+各仓 `CLAUDE.md` → **Agent 入口（短链）**；业务红线见子仓正文（n8n 企微等）。
 
-## 同步到本机 Cursor（建议执行一次）
+| 仓 | CLAUDE |
+|----|--------|
+| n8n | [`../安防-n8n运维/CLAUDE.md`](../安防-n8n运维/CLAUDE.md) |
+| 服务器 | [`../安防-服务器/CLAUDE.md`](../安防-服务器/CLAUDE.md) |
+| 专利 | [`../安防-专利/CLAUDE.md`](../安防-专利/CLAUDE.md) |
+| 官网 | [`../安防-官网/CLAUDE.md`](../安防-官网/CLAUDE.md) |
+| Hermes MCP | [`../../hermes-studio/AGENTS.md`](../../hermes-studio/AGENTS.md) |
+
+## 同步到本机（只开子仓时也建议执行）
 
 ```powershell
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.cursor\rules" | Out-Null
 Copy-Item -Force "F:\C\git\.cursor\rules\*.mdc" "$env:USERPROFILE\.cursor\rules\"
 robocopy "F:\C\git\.cursor\skills" "$env:USERPROFILE\.cursor\skills" /MIR /XD .git
 ```
@@ -33,5 +34,5 @@ robocopy "F:\C\git\.cursor\skills" "$env:USERPROFILE\.cursor\skills" /MIR /XD .g
 
 | 日期 | 说明 |
 |------|------|
-| 2026-05-16 | 设立总指挥；强制每轮 Superpowers + 技能路由调度。 |
-| 2026-05-19 | 补充 SKILLS-PRIORITY、anfang-patent 入口；明确子仓库规则为次级指针。 |
+| 2026-05-16 | 设立总指挥 |
+| 2026-05-26 | 收短为人读链接页；细则迁至 RATIONAL + routing |

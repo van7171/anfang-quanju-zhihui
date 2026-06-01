@@ -2,6 +2,8 @@
 
 跨四仓的 **Agent 总指挥** 仓库：规则指针、`docs/agent`、技能优先级说明。**不**包含 n8n 工作流、专利 PDF、官网源码。
 
+**Agent 入口** → 各仓 `CLAUDE.md#agent-入口短链` · 总规则 [`RATIONAL-AGENT.md`](../../RATIONAL-AGENT.md)
+
 ## 四仓（同级目录 `F:\C\git\安防开发总仓\`）
 
 | 目录 | GitHub | 职责 |

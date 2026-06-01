@@ -5,6 +5,8 @@
 | 文件 | 用途 |
 |------|------|
 | [`agent-skills-routing.md`](agent-skills-routing.md) | **技能路由全文**：plan / go / goon / fix、关键词表、冲突裁决 |
+| [`domain-skills-thinking.md`](domain-skills-thinking.md) | **领域思考 · 技能表** + `ensure-skill.ps1` 自动补齐流程 |
+| [`../../../../RATIONAL-AGENT.md`](../../../../RATIONAL-AGENT.md) | **理性综合 · 防幻觉**（总目录元规则） |
 | [`agent-context-from-workflow-drive.md`](agent-context-from-workflow-drive.md) | 写作排版、四阶段诊断、历史规则取舍（源自 `F:\C\workflow`） |
 
 **人读入口**：[`AGENT-COMMANDER.md`](../../AGENT-COMMANDER.md) · **Cursor 规则**：[`F:\C\git\.cursor\rules\00-agent-commander.mdc`](../../.cursor/rules/00-agent-commander.mdc) · **优先级**：[`SKILLS-PRIORITY.md`](../SKILLS-PRIORITY.md)

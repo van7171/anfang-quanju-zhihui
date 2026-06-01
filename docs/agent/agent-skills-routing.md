@@ -12,22 +12,23 @@
 
 ---
 
-## 0. 总指挥 · 每轮会话入口（Agent 自检）
+## 0. 总指挥 · 每轮会话入口（与 RATIONAL-AGENT 文档预算一致）
 
-**未完成下列步骤，不得给出实质回复或改文件**（子 agent 见 `using-superpowers` 的 SUBAGENT-STOP 除外）。
+**未完成下列步骤，不得给出实质回复或改文件**（子 agent 见 `using-superpowers` 的 SUBAGENT-STOP 除外）。  
+**预算**：开场固定 ≤4 个 Read；详见 [`RATIONAL-AGENT.md`](../../../../RATIONAL-AGENT.md) §3.2 与 [`00-agent-commander.mdc`](../../../../.cursor/rules/00-agent-commander.mdc) §1。
 
 | 步骤 | 动作 |
 |------|------|
-| 0.1 | **Read** `superpowers/skills/using-superpowers/SKILL.md`（`F:\C\git\.cursor\skills\` 或 `%USERPROFILE%\.cursor\skills\`） |
-| 0.2 | **Read** 本文件 **§0～§1**（至少扫表） |
-| 0.3 | 按用户消息加载 **§1 速记** 或 **§2 关键词** 所列 `SKILL.md` |
-| 0.4 | 将声称完成 / 修完前：**Read** `superpowers/skills/verification-before-completion/SKILL.md` |
+| 1 | **Read** `using-superpowers`（会话首次） |
+| 2 | **Read** `RATIONAL-AGENT` §1～§3（会话首次） |
+| 3 | **Read** 子仓 `CLAUDE.md` 红线 / 环境 / 触发词 + `Agent 入口` 短链 |
+| 4 | **增量**：扫本文件 **§1** 对应行 → **Read 1 个 SKILL**；领域见 [`domain-skills-thinking.md`](domain-skills-thinking.md) §2（按需）；完工前 `verification-before-completion` |
 
-| 用户意图大类 | 除上表外必读 |
-|--------------|----------------|
-| 安防总项目 / 任务书 / 商业化 | [`安防-n8n运维/docs/project-docs/ANFANG-PROGRAM-MASTER.md`](../../安防-n8n运维/docs/project-docs/ANFANG-PROGRAM-MASTER.md)、[`INDEX.md`](../../安防-n8n运维/docs/project-docs/INDEX.md) §0 |
-| n8n / 工作流 / 巡检 / 公众号 | [`安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md)、[`N8N_SPEC.md`](../../安防-n8n运维/N8N_SPEC.md) |
-| 任意 **`plan` / `fix` / `go` / `goon`** | **§1 对应行 + 所列 `SKILL.md` 必须先 Read 再回复** |
+| 用户意图大类 | 增量文档（+1，与 SKILL 合计仍控预算） |
+|--------------|----------------------------------------|
+| 安防总项目 / 任务书 | [`ANFANG-PROGRAM-MASTER.md`](../../安防-n8n运维/docs/project-docs/ANFANG-PROGRAM-MASTER.md) |
+| n8n / 巡检 / 公众号 | [`n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md) 或对应 playbook |
+| **`plan` / `fix` / `go` / `goon`** | 本文件 **§1** 行 → 先 Read **§1 列出的第一个 SKILL** |
 
 ---
 
@@ -126,10 +127,20 @@
 
 ---
 
-## 5. 变更记录
+## 5. 领域 skills（按需 · 不全文必读）
+
+完整八域表：[`domain-skills-thinking.md`](domain-skills-thinking.md) **§2**。子仓 `CLAUDE.md` 的 **Agent 入口** 短链指向对应 §2.x。
+
+- 缺 skill：`F:\C\git\scripts\ensure-skill.ps1` → 仍无则 `writing-skills` 脚手架。
+- **禁止**未 Read 本轮所需 SKILL 就改生产 / n8n / 发消息。
+
+---
+
+## 6. 变更记录
 
 | 日期 | 说明 |
 |------|------|
 | 2026-05-15 | 初版：plan/go/goon/fix 与 brainstorming、obsidian、playwright、superpowers 子技能绑定。 |
 | 2026-05-15 | 上收至 `F:\C\git\安防开发总仓\安防-n8n运维\docs\n8n-global\`，技能主副本在 `F:\C\git\.cursor\skills\`。 |
 | 2026-05-19 | 路由全文迁至 `F:\C\git\安防开发总仓\安防-全局指挥\docs\agent\`（跨项目）；`n8n-global` 留重定向 stub。 |
+| 2026-05-26 | §0/§5 与 RATIONAL-AGENT 文档预算对齐；领域 skills 改为按需 Read §2。 |
