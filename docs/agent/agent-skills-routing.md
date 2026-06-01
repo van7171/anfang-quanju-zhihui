@@ -1,7 +1,7 @@
 # Agent 技能路由（最高优先级 · 与对话速记绑定）
 
 本文件定义：**用户说什么 → 必须先读哪些 Skill / 仓库文档 → 按什么顺序产出**。  
-**总指挥（每轮必跑）**：Cursor 规则 [`F:\C\git\.cursor\rules\00-agent-commander.mdc`](../../.cursor/rules/00-agent-commander.mdc) · 人读 [`F:\C\git\AGENT-COMMANDER.md`](../../AGENT-COMMANDER.md)。
+**总指挥（每轮必跑）**：Cursor 规则 [`F:\C\git\.cursor\rules\00-agent-commander.mdc`](../../../../.cursor/rules/00-agent-commander.mdc) · 人读 [`AGENT-COMMANDER.md`](../../AGENT-COMMANDER.md)。
 
 **优先级栈（全文）**：[`docs/SKILLS-PRIORITY.md`](../SKILLS-PRIORITY.md)。摘要：用户指令 > `F:\C\git\.cursor\rules` > `F:\C\git\.cursor\skills` > 子仓库 `CLAUDE.md`（含 n8n 硬红线与备份钩子）> 子仓库 `.cursor/rules`（指针）> 本文件与各 `SKILL.md` 正文。
 
@@ -44,7 +44,7 @@
 1. `%USERPROFILE%\.cursor\skills\brainstorming\SKILL.md` — 澄清意图、约束、设计选项（Superpowers）
 2. `%USERPROFILE%\.cursor\skills\superpowers\skills\writing-plans\SKILL.md` — 可执行计划结构
 3. `%USERPROFILE%\.cursor\skills\01-plan\SKILL.md` — 依赖顺序与验收标准
-4. 若涉及 n8n / 某条工作流：[`N8N_SPEC.md`](../n8n-global/N8N_SPEC.md)（或 `n8n-fix` 根目录同名文件）+ 相关 playbook（如公众号 → [`gzh-workflow-playbook.md`](../n8n-global/gzh-workflow-playbook.md)）
+4. 若涉及 n8n / 某条工作流：[`N8N_SPEC.md`](../../../安防-n8n运维/N8N_SPEC.md)（或 [`docs/n8n-global/N8N_SPEC.md`](../../../安防-n8n运维/docs/n8n-global/N8N_SPEC.md)）+ 相关 playbook（如公众号 → [`gzh-workflow-playbook.md`](../../../安防-n8n运维/docs/n8n/gzh-workflow-playbook.md)）
 
 **产出（写入 `tmp/plans/`，见 `00-workspace-context`）**：
 
@@ -98,7 +98,7 @@
 
 | 用户提到 | 附加必读 Skill / 文档 |
 |----------|------------------------|
-| 公众号 / GZ | [`gzh-workflow-playbook.md`](../n8n-global/gzh-workflow-playbook.md)；规划阶段叠加 **brainstorming** |
+| 公众号 / GZ | [`gzh-workflow-playbook.md`](../../../安防-n8n运维/docs/n8n/gzh-workflow-playbook.md)；规划阶段叠加 **brainstorming** |
 | Obsidian /  vault / 笔记 / Canvas | `obsidian-skills\skills\` 下对应子技能（如 `obsidian-markdown`、`obsidian-cli`）的 `SKILL.md` |
 | Playwright / 浏览器测 / E2E / 页面自动化 | `%USERPROFILE%\.cursor\skills\playwright-cli\SKILL.md` |
 | 架构图 / 流程图 | `%USERPROFILE%\.cursor\skills\04-mermaid-diagrams\SKILL.md` |

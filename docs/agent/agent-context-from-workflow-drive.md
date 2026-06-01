@@ -1,6 +1,6 @@
 # Agent 辅助惯例（跨项目 · 源自 `F:\C\workflow`）
 
-本文档整理自本机 `F:\C\workflow` 下的规则类文件，摘取**仍有用且不冲突**的通用部分；领域红线以各子仓库 `CLAUDE.md` 为准（n8n 见 [`n8n-fix/CLAUDE.md`](../../安防-n8n运维/CLAUDE.md) + [`安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md)）。**n8n 专用补充**见 [`安防-n8n运维/docs/dev/agent-context-n8n-appendix.md`](../../安防-n8n运维/docs/dev/agent-context-n8n-appendix.md)。
+本文档整理自本机 `F:\C\workflow` 下的规则类文件，摘取**仍有用且不冲突**的通用部分；领域红线以各子仓库 `CLAUDE.md` 为准（n8n 见 [`安防-n8n运维/CLAUDE.md`](../../../安防-n8n运维/CLAUDE.md) + [`安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md`](../../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md)）。**n8n 专用补充**见 [`安防-n8n运维/docs/dev/agent-context-n8n-appendix.md`](../../../安防-n8n运维/docs/dev/agent-context-n8n-appendix.md)。
 
 ---
 
@@ -36,7 +36,7 @@
 
 ## 4. 「只改业务字段」原则（通用）
 
-**锁区**思想：不为「方便粘贴」而改结构标识、拓扑、凭证、受保护的长 prompt 等。具体禁止项见当前子仓库 `CLAUDE.md`（n8n 列在 `n8n-fix/CLAUDE.md` 与维护手册 §2、§6.3）。
+**锁区**思想：不为「方便粘贴」而改结构标识、拓扑、凭证、受保护的长 prompt 等。具体禁止项见当前子仓库 `CLAUDE.md`（n8n 列在 [`安防-n8n运维/CLAUDE.md`](../../../安防-n8n运维/CLAUDE.md) 与维护手册 §2、§6.3）。
 
 ---
 

@@ -1,6 +1,6 @@
 # Cursor 总指导策略（`F:\C\git` 全局）
 
-本目录为 **跨仓库** 的 Agent 总策略与技能实体存放处；各子项目（如 `n8n-fix`）通过 `CLAUDE.md` 链回本文件，**不重复维护** 大块规则。
+本目录为 **跨仓库** 的 Agent 总策略与技能实体存放处；各子项目（如 **安防-n8n运维**）通过 `CLAUDE.md` 链回本文件，**不重复维护** 大块规则。
 
 ---
 
@@ -13,7 +13,7 @@
 | [`F:\C\git\.cursor\rules\`](../.cursor/rules/) | **始终生效** 的 Cursor 规则（`alwaysApply`） |
 | [`F:\C\git\.cursor\skills\`](../.cursor/skills/) | 技能实体 **磁盘主副本**（与 `%USERPROFILE%\.cursor\skills\` 建议保持同步） |
 | [`F:\C\git\安防开发总仓\安防-全局指挥\docs\agent\`](agent/) | **跨项目** 技能路由、Agent 协作惯例 |
-| [`F:\C\git\安防开发总仓\安防-n8n运维\docs\n8n-global\`](n8n-global/) | n8n 域：`N8N_SPEC`、公众号 playbook 等 |
+| [`F:\C\git\安防开发总仓\安防-n8n运维\docs\n8n-global\`](../../安防-n8n运维/docs/n8n-global/) | n8n 域：`N8N_SPEC`、公众号 playbook 等（权威正文多在 `docs/n8n/`） |
 | [`F:\C\git\安防开发总仓\安防-n8n运维\`](../安防-n8n运维/) | n8n 运维与安防文档子仓库 |
 
 ---
@@ -28,7 +28,7 @@
 4. 子项目 **`CLAUDE.md`**（`安防-n8n运维` / `anfang-patent` 等领域红线）
 5. 子项目 **`.cursor/rules`**（仅指针，**不得**覆盖 §2）
 
-**硬红线**仍以 `n8n-fix` 内 `CLAUDE.md` + `docs/n8n/n8n-mcp-workflow-guide.md` 为准（仅 n8n 域）。
+**硬红线**仍以 **安防-n8n运维** 内 [`CLAUDE.md`](../../安防-n8n运维/CLAUDE.md) + [`docs/n8n/n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md) 为准（仅 n8n 域）。
 
 ---
 
@@ -71,10 +71,10 @@ Copy-Item -Force "F:\C\git\.cursor\rules\*.mdc" "$env:USERPROFILE\.cursor\rules\
 
 ```markdown
 全局策略：F:\C\git\安防开发总仓\安防-全局指挥\docs\CURSOR-TOTAL-GUIDE.md
-技能路由：F:\C\git\安防开发总仓\安防-n8n运维\docs\n8n-global\agent-skills-routing.md
+技能路由：F:\C\git\安防开发总仓\安防-全局指挥\docs\agent\agent-skills-routing.md
 ```
 
-`n8n-fix` 与 `anfang-patent` 已按此方式链接（仅指针，见 [`SKILLS-PRIORITY.md`](SKILLS-PRIORITY.md)）。
+**安防-n8n运维**、**安防-专利**、**安防-官网** 已按此方式链接（仅指针，见 [`SKILLS-PRIORITY.md`](SKILLS-PRIORITY.md)）。
 
 ---
 

@@ -15,7 +15,7 @@
 | 5 | **子仓库 `.cursor/rules`** | **仅指针**，链回 §2～§3；不得覆盖全局总指挥 |
 | 6 | **其他补充 md** | playbook、总项目 INDEX 等 |
 
-**冲突示例**：Skill 要求 Mock 凭证 → 以 `n8n-fix/CLAUDE.md` + `n8n-mcp-workflow-guide` 为准；子仓库 `.mdc` 与全局 `.mdc` 冲突 → 以 **全局** 为准。
+**冲突示例**：Skill 要求 Mock 凭证 → 以 [`安防-n8n运维/CLAUDE.md`](../../安防-n8n运维/CLAUDE.md) + [`n8n-mcp-workflow-guide`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md) 为准；子仓库 `.mdc` 与全局 `.mdc` 冲突 → 以 **全局** 为准。
 
 ---
 
