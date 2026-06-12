@@ -10,6 +10,8 @@ Cursor 每轮自动加载 [`F:\C\git\.cursor\rules\00-agent-commander.mdc`](../.
 | plan / go / fix · 关键词 | [`docs/agent/agent-skills-routing.md`](docs/agent/agent-skills-routing.md) |
 | 冲突优先级 | [`docs/SKILLS-PRIORITY.md`](docs/SKILLS-PRIORITY.md) |
 | 领域 skills（按需 §2） | [`docs/agent/domain-skills-thinking.md`](docs/agent/domain-skills-thinking.md) |
+| **何时调 Claude Code（升格 · 最高优先级）** | [`docs/WHEN-TO-USE-CLAUDE-CODE.md`](docs/WHEN-TO-USE-CLAUDE-CODE.md) — `plan` / `cc:` / 架构·高难度网页·PPT 等复杂难搞必调 |
+| Claude Code 安装与双轨 | [`docs/CLAUDE-CODE-CURSOR.md`](docs/CLAUDE-CODE-CURSOR.md) · 根 [`CLAUDE.md`](../../CLAUDE.md) |
 
 ## 子仓入口
 

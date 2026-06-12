@@ -9,6 +9,7 @@
 | 顺序 | 来源 | 说明 |
 |------|------|------|
 | 0 | **[`F:\C\git\RATIONAL-AGENT.md`](../../../RATIONAL-AGENT.md)** | **元规则**：防幻觉、文档阅读预算、理性解题循环；**不替代**下列硬红线 |
+| 0.5 | **[`WHEN-TO-USE-CLAUDE-CODE.md`](WHEN-TO-USE-CLAUDE-CODE.md)** | **Claude Code 升格**：`cc:` / `plan` / 复杂难搞（架构·高难度网页·PPT 等）必调；卡住先问用户；见 [`10-claude-code-escalation.mdc`](../../../.cursor/rules/10-claude-code-escalation.mdc) |
 | 1 | **用户当轮明确指令** | 对话中的直接要求；`plan` / `go` / `goon` / `fix` 视为执行授权（对象仍须明确） |
 | 2 | **`F:\C\git\.cursor\rules\*.mdc`** | 总指挥 `00-agent-commander.mdc`（`alwaysApply`） |
 | 3 | **`F:\C\git\.cursor\skills\`** | Superpowers、01-plan、playwright-cli 等 **磁盘主副本** |

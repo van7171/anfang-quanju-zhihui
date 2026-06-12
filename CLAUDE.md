@@ -7,6 +7,8 @@
 - 怎么想：[`F:\C\git\RATIONAL-AGENT.md`](../../RATIONAL-AGENT.md)
 - 本域 skills：[`domain-skills-thinking.md`](docs/agent/domain-skills-thinking.md) §2.3
 - 人读：[`AGENT-COMMANDER.md`](AGENT-COMMANDER.md)
+- **何时调 Claude**：[`docs/WHEN-TO-USE-CLAUDE-CODE.md`](docs/WHEN-TO-USE-CLAUDE-CODE.md)
+- Claude Code 安装：[`docs/CLAUDE-CODE-CURSOR.md`](docs/CLAUDE-CODE-CURSOR.md)
 
 ## 四仓指针（`F:\C\git\安防开发总仓\`）
 

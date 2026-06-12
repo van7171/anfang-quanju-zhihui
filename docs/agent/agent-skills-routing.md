@@ -21,8 +21,9 @@
 |------|------|
 | 1 | **Read** `using-superpowers`（会话首次） |
 | 2 | **Read** `RATIONAL-AGENT` §1～§3（会话首次） |
-| 3 | **Read** 子仓 `CLAUDE.md` 红线 / 环境 / 触发词 + `Agent 入口` 短链 |
-| 4 | **增量**：扫本文件 **§1** 对应行 → **Read 1 个 SKILL**；领域见 [`domain-skills-thinking.md`](domain-skills-thinking.md) §2（按需）；完工前 `verification-before-completion` |
+| 3 | **Read** [`WHEN-TO-USE-CLAUDE-CODE.md`](../WHEN-TO-USE-CLAUDE-CODE.md)（会话首次；`cc:` / `plan` / 升格） |
+| 4 | **Read** 子仓 `CLAUDE.md` 红线 / 环境 / 触发词 + `Agent 入口` 短链 |
+| 5 | **增量**：扫本文件 **§1** 对应行 → **Read 1 个 SKILL**；领域见 [`domain-skills-thinking.md`](domain-skills-thinking.md) §2（按需）；完工前 `verification-before-completion` |
 
 | 用户意图大类 | 增量文档（+1，与 SKILL 合计仍控预算） |
 |--------------|----------------------------------------|
@@ -40,14 +41,11 @@
 
 **禁止**：`update_workflow`、改 git 写盘、未授权的 MCP 写操作（用户随后 `go` / `fix` 除外）。
 
-**必读（按顺序）**：
+**Claude Code（必调）**：按 [`WHEN-TO-USE-CLAUDE-CODE.md`](../WHEN-TO-USE-CLAUDE-CODE.md) 与 [`10-claude-code-escalation.mdc`](../../../../.cursor/rules/10-claude-code-escalation.mdc)，Shell 执行 `claude -p` **仅生成规划正文**；**不由 CLI 直接写文件**。
 
-1. `%USERPROFILE%\.cursor\skills\brainstorming\SKILL.md` — 澄清意图、约束、设计选项（Superpowers）
-2. `%USERPROFILE%\.cursor\skills\superpowers\skills\writing-plans\SKILL.md` — 可执行计划结构
-3. `%USERPROFILE%\.cursor\skills\01-plan\SKILL.md` — 依赖顺序与验收标准
-4. 若涉及 n8n / 某条工作流：[`N8N_SPEC.md`](../../../安防-n8n运维/N8N_SPEC.md)（或 [`docs/n8n-global/N8N_SPEC.md`](../../../安防-n8n运维/docs/n8n-global/N8N_SPEC.md)）+ 相关 playbook（如公众号 → [`gzh-workflow-playbook.md`](../../../安防-n8n运维/docs/n8n/gzh-workflow-playbook.md)）
+**Cursor 侧可选补充**（不替代 Claude 调用）：`brainstorming` / `writing-plans` / `01-plan`；若涉及 n8n：[`N8N_SPEC.md`](../../../安防-n8n运维/N8N_SPEC.md) + 相关 playbook。
 
-**产出（写入 `tmp/plans/`，见 `00-workspace-context`）**：
+**产出（Cursor 将 Claude 输出摘要写入 `tmp/plans/`，见 `00-workspace-context`）**：
 
 - **OpenQuestions**（缺什么先问什么，最多 3 个关键问题）
 - **北极星 / 反目标**（一句话各一）
