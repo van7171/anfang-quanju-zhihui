@@ -6,6 +6,7 @@ Cursor 每轮自动加载 [`F:\C\git\.cursor\rules\00-agent-commander.mdc`](../.
 
 | 用途 | 文件 |
 |------|------|
+| **必读命令 · skills 必调** | [`../../MUST-READ-COMMANDS.md`](../../MUST-READ-COMMANDS.md) |
 | 怎么想 · 防幻觉 · 文档预算 | [`F:\C\git\RATIONAL-AGENT.md`](../../RATIONAL-AGENT.md) |
 | plan / go / fix · 关键词 | [`docs/agent/agent-skills-routing.md`](docs/agent/agent-skills-routing.md) |
 | 冲突优先级 | [`docs/SKILLS-PRIORITY.md`](docs/SKILLS-PRIORITY.md) |

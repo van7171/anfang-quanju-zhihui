@@ -4,15 +4,15 @@
 > **机器执行**：[`F:\C\git\.cursor\rules\10-claude-code-escalation.mdc`](../../../.cursor/rules/10-claude-code-escalation.mdc)  
 > **安装**：[`CLAUDE-CODE-CURSOR.md`](CLAUDE-CODE-CURSOR.md)
 
-**口诀**：小改 Cursor；**`plan` / `cc:` / 复杂难搞 / 同意升格 = Claude Code**。
+**口诀**：小改 Cursor；**句末 cc/用cc · `plan` · `cc:` · 复杂难搞 = Claude Code 必出场**。
 
 ---
 
 ## 三条铁律
 
-1. 用户 **`cc:`**、**`plan`**（及同义）、或 **复杂难搞类任务**（见下表）→ **必须** Shell 调本机 `claude -p`（非 Cursor 模型下拉）。
+1. 用户 **`cc` 提示**（句末/用cc/cc:）、**`plan`**、或 **复杂难搞** → **必须** Shell 调 `claude -p`；Cursor 与 Claude **双轨分工**（Claude 复杂，Cursor 落地），**不得**跳过 Claude 独答。
 2. **主动升格**（卡住、多轮无果等）前须 **先问用户**；目标不清 → AskQuestion（最多 1 题）。**不得**未同意静默调 API。
-3. 仍遵守 [`安防-n8n运维/CLAUDE.md`](../../安防-n8n运维/CLAUDE.md) 与 [`n8n-mcp-workflow-guide.md`](../../安防-n8n运维/docs/n8n/n8n-mcp-workflow-guide.md) 硬红线。
+3. 仍遵守 n8n 红线（见 安防-n8n运维/CLAUDE.md）。
 
 ---
 
@@ -20,8 +20,8 @@
 
 | 触发 | 行为 |
 |------|------|
-| 消息以 **`cc:`** / **`cc：`** 开头 | `claude -p` 全任务（可执行向；仍守 n8n 授权边界） |
-| 整句 **`plan`** 或「对齐需求 / 没思路 / 列方案我选」 | `claude -p` **仅规划**（见下表）；**禁止**改 git、改 n8n、MCP 写 |
+| 句末或句中 **`cc` / `用cc` / `用 cc` / `用 claude code`**，或 **`cc:`** 开头 | `claude -p` **双轨分工**；回复须注明 Claude 已参与 |
+| 整句 **`plan`** 或「对齐需求 / 没思路 / 列方案我选」 | `claude -p` **仅规划**；禁止改 git、改 n8n |
 
 ### `plan` 时 Claude 只做什么
 
@@ -75,16 +75,16 @@
 
 ## 调用方式（Agent 统一）
 
-工作目录：`F:\C\git`（子仓任务可在 prompt 中写明路径）。
+工作目录：`F:\C\git`。优先：
 
 ```powershell
-cd F:\C\git
-claude -p "<任务全文>" --append-system-prompt "<见 escalation.mdc>"
+powershell -NoProfile -ExecutionPolicy Bypass -File F:\C\git\scripts\cc-invoke.ps1 `
+  -Prompt "<任务全文>" -AppendSystemPrompt "<见 escalation.mdc 双轨/规划 append>" -MaxTurns 8
 ```
 
 | 模式 | append 要点 |
 |------|-------------|
-| **cc:** | 遵守 RATIONAL-AGENT + n8n 红线；无证据不下结论 |
+| **cc / cc: / 用cc** | **双轨分工** + RATIONAL-AGENT + n8n 红线 |
 | **plan** | **仅规划**；禁止改 git / update_workflow / MCP 写；产出结构见上 |
 | **升格** | 同 cc，并附上本会话 blocker 摘要 |
 
@@ -107,7 +107,7 @@ claude -p "<任务全文>" --append-system-prompt "<见 escalation.mdc>"
 | 速记 | 谁主执 | Claude Code |
 |------|--------|-------------|
 | **plan** | Claude 出规划 → Cursor 可落盘 `tmp/plans/` | **必调** |
-| **cc:** | Claude | **必调** |
+| **cc:** / **句末 cc·用cc** | Claude 复杂 + Cursor 落地 | **必调** |
 | **架构 / 高难度网页·UI / PPT** 等复杂难搞 | Claude 主执；Cursor 可整理落盘 | **必调** |
 | **go** / **fix** / **goon** | Cursor（除非用户再加 `cc:`、命中复杂任务类型或同意升格） | 按需 |
 | 日常聊天 | Cursor | 否（除非复杂任务 / 升格信号 + 用户同意） |

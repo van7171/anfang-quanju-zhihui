@@ -28,6 +28,26 @@ claude --version
 
 **认证**（复杂任务）：在交互式 `claude` 中按提示配置，或 [Anthropic Console](https://console.anthropic.com/) 创建 Key。**勿**将 Key 写入 Git；可放用户环境变量或 `安防-服务器/secrets/.env`（本地 gitignore）。
 
+### 当前环境快照（2026-06-12 · 本机已验证）
+
+| 项 | 状态 |
+|----|------|
+| CLI | `2.1.174`（`claude.cmd --version`） |
+| API | DeepSeek Anthropic 兼容端点 `https://api.deepseek.com/anthropic` |
+| 环境变量 | 用户级 `ANTHROPIC_BASE_URL` + `ANTHROPIC_API_KEY`（已设） |
+| 调用 | **`cc-invoke.ps1` 或 `claude.cmd`**；勿直接 `claude`（会走 `claude.ps1`） |
+| stdin 警告 | `Warning: no stdin data...` 无害，可忽略 |
+| Agent 统一入口 | `F:\C\git\scripts\cc-invoke.ps1` |
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File F:\C\git\scripts\cc-invoke.ps1 `
+  -Prompt "<任务>" -AppendSystemPrompt "<双轨/规划 append>" -MaxTurns 8
+```
+
+**PowerShell 拦截**：若 `claude` 报 execution policy，用 `claude.cmd` 或上脚本；或 `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`（本机 CurrentUser 已为 RemoteSigned）。
+
+**句末 cc 提示**：用户消息含 `cc` / `用cc` / `cc:` → Cursor Agent **必调** Claude Code（见 [`10-claude-code-escalation.mdc`](../../../.cursor/rules/10-claude-code-escalation.mdc)）。
+
 ---
 
 ## 2. 在 Cursor 里接通（无感习惯）
@@ -67,7 +87,7 @@ claude --version
 |------|------|
 | [`F:\C\git\CLAUDE.md`](../../../CLAUDE.md) | Claude Code **根入口** |
 | [`RATIONAL-AGENT.md`](../../../RATIONAL-AGENT.md) | 防幻觉、文档预算 |
-| [`CLAUDE.md`](../CLAUDE.md) | 四仓索引 |
+| [`CLAUDE.md`](../CLAUDE.md) | 七子仓索引 |
 | 子仓 `CLAUDE.md` | 进入子目录时叠加 |
 | [`.cursor/rules`](../../../.cursor/rules) | **仅 Cursor** alwaysApply；Claude Code 不自动读 mdc |
 

@@ -19,11 +19,12 @@
 
 | 步骤 | 动作 |
 |------|------|
-| 1 | **Read** `using-superpowers`（会话首次） |
-| 2 | **Read** `RATIONAL-AGENT` §1～§3（会话首次） |
-| 3 | **Read** [`WHEN-TO-USE-CLAUDE-CODE.md`](../WHEN-TO-USE-CLAUDE-CODE.md)（会话首次；`cc:` / `plan` / 升格） |
-| 4 | **Read** 子仓 `CLAUDE.md` 红线 / 环境 / 触发词 + `Agent 入口` 短链 |
-| 5 | **增量**：扫本文件 **§1** 对应行 → **Read 1 个 SKILL**；领域见 [`domain-skills-thinking.md`](domain-skills-thinking.md) §2（按需）；完工前 `verification-before-completion` |
+| 1 | **Read** `using-superpowers`（**会话首次**；后续轮次跳过） |
+| 2 | **Read** `RATIONAL-AGENT` §1～§3（**会话首次**） |
+| 3 | **Read** [`WHEN-TO-USE-CLAUDE-CODE.md`](../WHEN-TO-USE-CLAUDE-CODE.md)（**会话首次**） |
+| 4 | **Read** [`MUST-READ-COMMANDS.md`](../../../../MUST-READ-COMMANDS.md) §2（**会话首次**；设计/n8n 命中即 Read INDEX+SKILL） |
+| 5 | **Read** 子仓 `CLAUDE.md` 红线（**每仓首次**） |
+| 6 | **增量**：扫本文件 **§1** → **Read 1 个 SKILL**；完工前 `verification-before-completion` |
 
 | 用户意图大类 | 增量文档（+1，与 SKILL 合计仍控预算） |
 |--------------|----------------------------------------|

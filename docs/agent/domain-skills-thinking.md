@@ -13,7 +13,7 @@
 ## 2. 各领域 · 思考阶段技能表
 
 路径均相对 `F:\C\git\.cursor\skills\`（或 `%USERPROFILE%\.cursor\skills\`）。  
-**plan** 任务加读 **brainstorming** → **writing-plans** → **01-plan**（见路由 §1）。
+**plan / go / fix / cc** 速记全文见 [`agent-skills-routing.md`](agent-skills-routing.md) **§1**；本文件 §2 仅列领域 skills。
 
 ### 2.1 工作区根 `F:\C\git`
 
@@ -46,6 +46,7 @@
 
 | 阶段 | 必读 Skill |
 |------|------------|
+| 路由 | `n8n/INDEX.md` → `n8n/anfang-ops-redlines` → **1** 个 `n8n/n8n-*`（见 INDEX 表） |
 | fix | `superpowers/skills/systematic-debugging`（先于改流） |
 | go | `superpowers/skills/executing-plans` |
 | plan | `superpowers/skills/brainstorming`、`writing-plans`、`01-plan` + 仓内 `N8N_SPEC` / playbook |
@@ -53,6 +54,7 @@
 | 页面/回调验 | `playwright-cli` |
 | 大改完工 | `superpowers/skills/requesting-code-review`（可选） |
 | 完工 | `verification-before-completion` + 备份钩子 |
+| 更新 skills | `F:\C\git\scripts\sync-domain-skills.ps1 -Domain n8n` |
 
 ### 2.5 安防-服务器
 
@@ -77,10 +79,13 @@
 
 | 阶段 | 必读 Skill |
 |------|------------|
-| UI/交互 plan | `superpowers/skills/brainstorming` |
+| 大屏/可视化/官网 UI | `anfang-opensource-ref` + 仓内 `web/open-source-ref/INDEX.md` |
+| 路由 | `design/INDEX.md` → **1～2** 个 `design/*`（见 INDEX；PPT 用 `pptx`） |
+| UI/交互 plan | `superpowers/skills/brainstorming` + `design/frontend-design` |
 | 浏览器验收 | `playwright-cli` |
 | go 实现 | `superpowers/skills/executing-plans` |
 | 完工 | `verification-before-completion` |
+| 更新 skills | `F:\C\git\scripts\sync-domain-skills.ps1 -Domain design` |
 
 ### 2.8 安防-cursor-skills
 
@@ -135,3 +140,20 @@ robocopy "F:\C\git\.cursor\skills\<领域名>" "$env:USERPROFILE\.cursor\skills\
 | 日期 | 说明 |
 |------|------|
 | 2026-05-26 | 初版：领域技能表 + ensure-skill.ps1 联动各仓角色定位 |
+| 2026-06-13 | 分仓 Junction 部署：见 [`F:\C\git\STRUCTURE.md`](../../../../STRUCTURE.md) · `deploy-project-skills.ps1` |
+
+---
+
+## 6. 分仓 Skills 视图（Junction）
+
+真源：`F:\C\git\.cursor\skills\`。各子仓 `.cursor/skills/` 由 `scripts/deploy-project-skills.ps1` 生成，**只改真源后重跑脚本**。
+
+| 子仓 | SKILLS.md | 数量 |
+|------|-----------|------|
+| 全局指挥 | [`../../SKILLS.md`](../../SKILLS.md) | 4 |
+| n8n运维 | [`../../../安防-n8n运维/SKILLS.md`](../../../安防-n8n运维/SKILLS.md) | 5 |
+| 官网 | [`../../../安防-官网/SKILLS.md`](../../../安防-官网/SKILLS.md) | 6 |
+| 专利 | [`../../../安防-专利/SKILLS.md`](../../../安防-专利/SKILLS.md) | 4 |
+| 服务器 | [`../../../安防-服务器/SKILLS.md`](../../../安防-服务器/SKILLS.md) | 5 |
+| Hermes同伴 | [`../../../安防-Hermes同伴/SKILLS.md`](../../../安防-Hermes同伴/SKILLS.md) | 5 |
+| hermes-studio | [`../../../../hermes-studio/SKILLS.md`](../../../../hermes-studio/SKILLS.md) | 4 |

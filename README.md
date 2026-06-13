@@ -1,17 +1,20 @@
 # 安防-全局指挥（anfang-quanju-zhihui）
 
-跨四仓的 **Agent 总指挥** 仓库：规则指针、`docs/agent`、技能优先级说明。**不**包含 n8n 工作流、专利 PDF、官网源码。
+跨 **七子仓** 的 **Agent 总指挥** 仓库：规则指针、`docs/agent`、技能优先级。**不**含 n8n 工作流、专利 PDF、官网源码。
 
-**Agent 入口** → 各仓 `CLAUDE.md#agent-入口短链` · 总规则 [`RATIONAL-AGENT.md`](../../RATIONAL-AGENT.md)
+**Agent 入口** → 各仓 `CLAUDE.md` · [`RATIONAL-AGENT.md`](../../RATIONAL-AGENT.md) · 全盘 [`STRUCTURE.md`](../../STRUCTURE.md)
 
-## 四仓（同级目录 `F:\C\git\安防开发总仓\`）
+## 七子仓（`F:\C\git\安防开发总仓\`）
 
-| 目录 | GitHub | 职责 |
-|------|--------|------|
-| [`../安防-n8n运维/`](../安防-n8n运维/) | `van7171/n8n-fix` | n8n 运维、Schema、安防编排 |
-| [`../安防-专利/`](../安防-专利/) | `van7171/anfang-zhuanli` | 专利、任务书 PDF |
-| [`../安防-官网/`](../安防-官网/) | `van7171/anfang-guanwang` | 官网 Vite + 文案 |
-| **本仓** | `van7171/anfang-quanju-zhihui` | 本 README、`AGENT-COMMANDER`、路由 |
+| 目录 | 职责 |
+|------|------|
+| [`../安防-n8n运维/`](../安防-n8n运维/) | n8n 运维 |
+| [`../安防-专利/`](../安防-专利/) | 专利 |
+| [`../安防-官网/`](../安防-官网/) | 官网 |
+| [`../安防-服务器/`](../安防-服务器/) | 部署 |
+| [`../安防-Hermes同伴/`](../安防-Hermes同伴/) | Hermes 同伴 |
+| [`../安防-cursor-skills/`](../安防-cursor-skills/) | Skills 备份 |
+| **本仓** | 路由、升格 |
 
 父级索引：[`../README.md`](../README.md)。
 
